@@ -1,3 +1,4 @@
+* UPDATE 8/5/2024 - Get Frontend to sync with Go service and Python service, working on search feature next*
 * UPDATE 8/2/2024 - Backend code complete, working on NextJS code to put it all together in terms of best practices and adding features*
 
 # News Aggregator Application
@@ -44,15 +45,20 @@ news-aggregator-app/
 │ │ ├── components/
 │ │ │ ├── Layout.jsx
 │ │ │ ├── Navbar.jsx
+│ │ │ ├── Article.jsx
 │ │ │ ├── Recommendations.jsx
-│ │ │ └── TrendingSearches.jsx
+│ │ │ ├── TrendingSearches.jsx
+│ │ │ ├── PlaceholderImage.jsx
+│ │ │ ├── AuthFormLayout.jsx
+│ │ │ └── Toast.jsx
 │ │ ├── hooks/
+│ │ │ ├── useNews.jsx
+│ │ │ ├── useRecommendations.jsx
+│ │ │ ├── useSearch.jsx
+│ │ │ ├── useTrendingSearches.jsx
 │ │ │ └── useToast.js
-│ │ ├── store/
-│ │ │ ├── newsStore.js
-│ │ │ └── userStore.js
-│ │ └── styles/
-│ │ └── globals.css
+│ │ ├── styles/
+│ │ │ └── globals.css
 │ ├── .env.local
 │ ├── .eslintrc.json
 │ ├── .gitignore
@@ -79,21 +85,23 @@ news-aggregator-app/
 │ │ ├── db/
 │ │ │ ├── articles.go
 │ │ │ ├── db.go
+│ │ │ ├── indexes.go
 │ │ │ ├── recommendation.go
 │ │ │ ├── trending.go
 │ │ │ └── user.go
 │ │ ├── models/
 │ │ │ ├── article.go
-│ │ │ ├── py_article.go
+│ │ │ ├── Claims.go
 │ │ │ ├── trending.go
 │ │ │ └── user.go
 │ │ ├── news/
 │ │ │ ├── fetch.go
 │ │ │ ├── handler.go
+│ │ │ ├── archive.go
 │ │ │ ├── sync.go
 │ │ │ └── trending.go
 │ │ └── user/
-│ │ └── handler.go
+│ │     └── handler.go
 │ ├── .env
 │ ├── .env_sample
 │ ├── .gitignore
@@ -107,14 +115,15 @@ news-aggregator-app/
 │ ├── .idea/
 │ ├── .venv/
 │ ├── model/
-│ │ └── model.py
+│ │ └── articles.csv
 │ ├── models/
-│ │ ├── add_dummy_data.py
-│ │ ├── recreate_articles_table.py
+│ │ └── article.py
 │ ├── static/
+│ ├── recreate-articles-table/
 │ ├── templates/
 │ ├── .env
 │ ├── app.py
+│ ├── model.py (to train our model)
 │ ├── requirements.txt
 │ └── README.md
 ├── .gitignore
