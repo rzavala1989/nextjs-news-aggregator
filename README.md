@@ -212,17 +212,41 @@ npm install
 ```
 
 - Set up environment variables for local development
+
+You will need API keys for the news sources, I have provided a sample .env.local file in the frontend directory. You will need to replace the values with your own API keys.
+Below are the links to the APIs I used with Golang:
+- [Currents API](https://currentsapi.services/en/docs/) (for news articles)
+- [TheNewsAPI](https://newsapi.org/docs) (for news articles)
+- [NewsData.io](https://newsdata.io/) (for news articles)
+- [MediaStack](https://mediastack.com/) (for news articles)
+- [SerpAPI](https://serpapi.com/) (for trending search results, I used Google Trends API)
 ```
-NEXT_PUBLIC_API_URL=http://localhost:8080
-NEXT_PUBLIC_RECOMMENDATION_URL=http://localhost:5000
 
-NEXT_PUBLIC_CURRENTS_API_KEY=your_currents_api_key
-NEXT_PUBLIC_THENEWSAPI_API_KEY=your_thenewsapi_api_key
-NEXT_PUBLIC_NEWSDATAIO_API_KEY=your_newsdataio_api_key
-NEXT_PUBLIC_MEDIASTACK_API_KEY=your_mediastack_api_key
-NEXT_PUBLIC_SERPAPI_API_KEY=your_serpapi_key
-NEXT_PUBLIC_JWT_SECRET=your_jwt_secret
+PYTHON_RECOMMENDATION_SERVICE_URL=http://localhost:5000
 
+CURRENTS_API_KEY=your_currents_api_key
+THENEWSAPI_API_KEY=your_thenewsapi_api_key
+NEWSDATAIO_API_KEY=your_newsdataio_api_key
+MEDIASTACK_API_KEY=your_mediastack_api_key
+SERPAPI_API_KEY=your_serpapi_key
+JWT_SECRET_KEY=your_jwt_secret
+
+DATABASE_PATH=data/database.db (thats where I'm keeping mine, however for more secretive data, I would recommend a .env file to keep it hidden)
+
+```
+
+Below are the NextJS environment variables:
+```
+NEXT_PUBLIC_API_URL=YourGoServerURL
+NEXT_PUBLIC_RECOMMENDATION_URL=YourPythonServerURL
+
+
+NEXT_JWT_SECRET=YourVeryLongAndComplexSecretKey
+```
+
+And finally Python environment variables:
+```
+DATABASE_PATH=../news-aggregator/data/database.db  <--- this directs to the Go server's database
 ```
 
 - Run the Next.js server
