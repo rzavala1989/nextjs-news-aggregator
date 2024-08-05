@@ -1,0 +1,6 @@
+Flask
+pandas
+sqlalchemy
+scikit-learn
+PyJWT
+python-dotenv

@@ -1,0 +1,4 @@
+username,title,content,author,url,image_url,language,published_at
+testuser,Election Fraud in the US,There have been claims of election fraud in the US...,Derek Hunter,http://example.com/first-article,https://images.pexels.com/photos/1550337/pexels-photo-1550337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2,en,2024-07-30
+testuser,Climate Change Impacts,Climate change is having a significant impact on the environment...,Mr. Clean,http://example.com/second-article,https://images.pexels.com/photos/60013/desert-drought-dehydrated-clay-soil-60013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2,en,2024-07-31
+testuser,Not Like Us,Your best friend has a secret and a very weird case. He's not like us...,"Muhammed Beshear Smith, PhD.",http://example.com/third-article,https://images.pexels.com/photos/3824771/pexels-photo-3824771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2,en,2024-06-01

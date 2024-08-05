@@ -1,0 +1,15 @@
+frontend/.idea
+frontend/node_modules
+frontend/.env.local
+
+# Go Backend
+news-aggregator/.idea
+news-aggregator/.env
+
+#Python Backend
+news_aggregator_recommendations/.idea
+news_aggregator_recommendations/.env
+news_aggregator_recommendations/.vscode
+news_aggregator_recommendations/*.exe
+
+
