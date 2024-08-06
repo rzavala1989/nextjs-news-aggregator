@@ -1,3 +1,4 @@
+* UPDATE 8/5/2024 - Jest Frontend tests added
 * UPDATE 8/5/2024 - Get Frontend to sync with Go service and Python service, working on search feature next*
 * UPDATE 8/2/2024 - Backend code complete, working on NextJS code to put it all together in terms of best practices and adding features*
 
