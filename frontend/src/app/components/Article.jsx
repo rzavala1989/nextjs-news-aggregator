@@ -1,3 +1,4 @@
+import React from "react";
 import Image from 'next/image';
 import PlaceholderImage from './PlaceholderImage';
 
@@ -21,8 +22,8 @@ const Article = ({ article }) => {
             alt={title}
             width={130}
             height={130}
-            objectFit="cover"
             className="rounded"
+            style={{ objectFit: 'cover' }}
           />
         ) : (
           <PlaceholderImage />
@@ -30,7 +31,7 @@ const Article = ({ article }) => {
       </div>
       <div className="flex-grow">
         <h2 className="card-title text-xl font-semibold">{title}</h2>
-        <p className="text-sm text-gray-500">{new Date(published_at).toLocaleDateString()}</p>
+        <p className="text-sm text-gray-500">{new Date(published_at).toLocaleDateString()} {author !== "" && `by ${author}`}</p>
         <p className="mt-2">{truncateContent(content, 200)}</p>
         <a
           href={url}

@@ -1,7 +1,6 @@
-// src/app/components/Recommendations.jsx
+import React, { useEffect, useState } from 'react';
 import { useRecommendations } from '@/hooks/useRecommendations';
 import { useSession, signIn } from 'next-auth/react';
-import { useEffect, useState } from 'react';
 import useToast from '@/hooks/useToast';
 import Toast from '@/app/components/Toast';
 import Article from '@/app/components/Article';

@@ -5,7 +5,6 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import AuthFormLayout from '@/app/components/AuthFormLayout';
-
 export default function Register() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
